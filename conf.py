@@ -43,10 +43,13 @@ extensions = ['sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.imgmath',
     'sphinx.ext.ifconfig',
-#    'sphinxcontrib.findanything',
+    'sphinxcontrib.findanything',
+    'sphinxcontrib.httpdomain',
+    'sphinxcontrib.jsoncall',
+    'sphinxcontrib.findanything',
     'tutorial']
 
-
+jsoncall_baseurl = 'https://jsonplaceholder.typicode.com'
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -197,5 +200,3 @@ source_parsers = {
 }
 
 # JSON CALL
-jsoncall_baseurl = 'http://somwhere.com/api'
-

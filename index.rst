@@ -18,6 +18,7 @@ RST files:
 
 .. todo:: There are so many things we need to add here...
 
+.. jsoncall:: /posts/1
 
 TODO list
 
