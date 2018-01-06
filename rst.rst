@@ -11,7 +11,7 @@ More content
 
 .. jsoncall:: /posts/1
 
-
+      {"prettyprint": "true"}
 
 .. todo:: This definitely...
 

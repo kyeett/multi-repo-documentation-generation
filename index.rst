@@ -20,6 +20,9 @@ RST files:
 
 .. jsoncall:: /posts/1
 
+      {"prettyprint": "true"}
+
+
 TODO list
 
 .. todolist::
