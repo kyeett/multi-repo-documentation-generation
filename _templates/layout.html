@@ -1,0 +1,37 @@
+{% extends "!layout.html" %}
+
+<!-- Add additional script file -->
+{% set script_files = script_files + ["_static/myscript.js"] %}
+
+{% block comments %}
+
+<hr>
+
+    <div id="feedback_1">
+        <b>Can this article be improved?</b>
+        <br>
+        <button class="btn btn-info" title="fb_yes" id="fb_yes">Yes</button>
+        <button class="btn btn-info" title="fb_no" id="fb_no">No</button>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+
+    <div id="feedback_2" style="display: none;">
+        <b>Sorry about that!</b>
+        <br>
+        How can we improve it?
+        <textarea rows="8" style="margin: 10px 0px;"></textarea>
+        <button class="btn btn-info" title="fb_submit" id="fb_submit">Submit</button>
+        <br>
+    </div>
+
+    <div id="feedback_3" style="display:none">
+        <b>Good to hear!</b>
+        <br>
+    </div>
+
+    {{ super() }}
+
+{% endblock %}

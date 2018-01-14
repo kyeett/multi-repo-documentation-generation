@@ -4,25 +4,18 @@ Markdown test
 Markdown files:
 
 .. toctree::
-   :glob:
+..   :glob:
 
-   docs/*
-   markdown
+..   docs/*
+..   markdown
 
 RST files:
 
-.. toctree::
-   :glob:
+..   :glob:
 
-   rst
+..   rst
 
 .. todo:: There are so many things we need to add here...
-
 .. jsoncall:: /posts/1
 
       {"prettyprint": "true"}
-
-
-TODO list
-
-.. todolist::

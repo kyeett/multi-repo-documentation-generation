@@ -43,10 +43,8 @@ extensions = ['sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.imgmath',
     'sphinx.ext.ifconfig',
-    'sphinxcontrib.findanything',
     'sphinxcontrib.httpdomain',
     'sphinxcontrib.jsoncall',
-    'sphinxcontrib.findanything',
     'tutorial']
 
 jsoncall_baseurl = 'https://jsonplaceholder.typicode.com'
@@ -107,7 +105,8 @@ html_theme_path = ["_themes", ]
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
