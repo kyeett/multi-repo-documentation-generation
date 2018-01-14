@@ -1,7 +1,7 @@
 
-function SendLinkByMail(insertedBody) {
-    var subject= "Interesting Information";
-    var body = "Hi! \r\nHere are my improvement suggestions:\r\n\r\n" + insertedBody;
+function SendLinkByMail(project, metadata, improvements) {
+    var subject= "Improvement suggestions for '"+ project +"'";
+    var body = "Hi! \r\n\r\nDocumentation info (please keep):\r\n" + metadata + "\r\nHere are my improvement suggestions:\r\n\r\n" + improvements + "\r\n";
     var uri = "mailto:someone@example.com?subject=";
     uri += encodeURIComponent(subject);
     uri += "&body=";
@@ -22,6 +22,11 @@ $('#fb_no').click(function() {
 })
 
 $('#fb_submit').click(function() {
-    body = $('#feedback_2>textarea').val();
-    SendLinkByMail(body)
+    project = $('#fb_project').text();
+    metadata = $('#fb_metadata').html().replace(/TAB/g, '\t');
+    improvements = $('#feedback_2>textarea').val();
+    SendLinkByMail(project, metadata, improvements)
 });
+
+//alert($('#fb_metadata').html().replace(/<br>/g, '\t'));
+

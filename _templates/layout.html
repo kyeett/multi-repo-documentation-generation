@@ -5,33 +5,65 @@
 
 {% block comments %}
 
+<!-- The title used in the e-mail subject -->
+<div id="fb_project" style="display: none;">{{ docstitle }}</div>
+
+<!-- Metadata used in body of mail -->
+<div id="fb_metadata" style="display: none;">
+Document: {{ project }}
+Title:    {{ title }}
+Source:   {{ pagename }}
+Version:  {{ version }} (rel: {{ release }})
+</div>
+
+<!--
+builder:    {{ builder }}<br>
+copyright:  {{ copyright }}<br>
+docstitle:  {{ docstitle }}<br>
+embedded:   {{ embedded }}<br>
+favicon:    {{ favicon }}<br>
+file_suffix:    {{ file_suffix }}<br>
+has_source: {{ has_source }}<br>
+language:   {{ language }}<br>
+last_updated:   {{ last_updated }}<br>
+rellinks:   {{ rellinks }}<br>
+shorttitle: {{ shorttitle }}<br>
+show_source:    {{ show_source }}<br>
+sphinx_version: {{ sphinx_version }}<br>
+style:  {{ style }}<br>
+use_opensearch: {{ use_opensearch }}<br>
+display_toc:    {{ display_toc }}<br>
+meta:   {{ meta }}<br>
+metatags:   {{ metatags }}<br>
+page_source_suffix: {{ page_source_suffix }}<br>
+parents:    {{ parents }}<br>
+prev:   {{ prev }}<br>
+sourcename: {{ sourcename }}<br>
+-->
+
 <hr>
 
-    <div id="feedback_1">
-        <b>Can this article be improved?</b>
-        <br>
-        <button class="btn btn-info" title="fb_yes" id="fb_yes">Yes</button>
-        <button class="btn btn-info" title="fb_no" id="fb_no">No</button>
-    </div>
+<div id="feedback_1">
+    <b>Can this article be improved?</b>
+    <br>
+    <button class="btn btn-info" title="fb_yes" id="fb_yes">Yes</button>
+    <button class="btn btn-info" title="fb_no" id="fb_no">No</button>
+</div>
 
-    <script type="text/javascript">
+<div id="feedback_2" style="display: none;">
+    <b>Sorry about that!</b>
+    <br>
+    How can we improve it?
+    <textarea rows="8" style="margin: 10px 0px;"></textarea>
+    <button class="btn btn-info" title="fb_submit" id="fb_submit">Submit</button>
+    <br>
+</div>
 
-    </script>
+<div id="feedback_3" style="display:none">
+    <b>Good to hear!</b>
+    <br>
+</div>
 
-    <div id="feedback_2" style="display: none;">
-        <b>Sorry about that!</b>
-        <br>
-        How can we improve it?
-        <textarea rows="8" style="margin: 10px 0px;"></textarea>
-        <button class="btn btn-info" title="fb_submit" id="fb_submit">Submit</button>
-        <br>
-    </div>
-
-    <div id="feedback_3" style="display:none">
-        <b>Good to hear!</b>
-        <br>
-    </div>
-
-    {{ super() }}
+{{ super() }}
 
 {% endblock %}
